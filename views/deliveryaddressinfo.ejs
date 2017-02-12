@@ -1,0 +1,22 @@
+<% include partials/head %>
+
+  <body>
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
+        <h1 class=" fa fa-user"> Profile</h1><br>
+        <span><strong>user id</strong>: <%= user._id ? user._id : '' %></span><br>
+        <span class="fa fa-sign-out"><a href="/"> Sign out</a></span>
+        <hr>
+        <div class="jumbotron">
+           <span><strong>user</strong>: <%= user.user ? user.user : '' %></span><br>
+           <span><strong>name</strong>: <%= user.name ? user.name : '' %></span><br>
+           <span><strong>email</strong>: <%= user.email ? user.email : '' %></span><br>
+           <span><strong>tel</strong>: <%= user.tel ? user.tel : '' %></span><br>
+           <span><strong>address</strong>: <%= user.address ? user.address : '' %></span><br>
+           <span><strong>last updated time</strong>: <%= user.updated_at ? user.updated_at : '' %></span><br>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

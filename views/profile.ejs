@@ -1,0 +1,39 @@
+<% include partials/head %>
+
+  <body>
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
+        <h1 class=" fa fa-user"> Profile</h1><br>
+        <span><strong>user id</strong>: <%= user._id ? user._id : '' %></span><br>
+        <span class="fa fa-sign-out"><a href="/"> Sign out</a></span>
+        <hr>
+        <div class="jumbotron">
+            <h3>create or update the delivery address</h3>
+            <form action="/deliveryaddress" method="POST">
+              <input type="text" placeholder="user" name="user">
+              <input type="text" placeholder="name" name="name">
+              <input type="text" placeholder="email" name="email">
+              <input type="number" placeholder="tel" name="tel">
+              <input type="text" placeholder="address" name="address">
+              <button type="submit">Submit</button>
+           </form>
+           <hr>
+           <h3>find user's delivery address</h3>
+           <form action="/deliveryaddress" method="GET"> 
+              <input type="text" placeholder="user" name="user">
+              <button type="submit">Click and find user's delivery address</button>
+           </form>
+          <hr>
+          <h3>delete user's delivery address</h3>
+          <form action="/deliveryaddress" method="POST">
+              <input type="hidden" name="delete" value="true">
+              <input type="text" placeholder="user" name="user">
+              <button type="submit">Click and delete user's delivery address</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
